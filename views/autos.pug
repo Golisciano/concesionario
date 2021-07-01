@@ -1,0 +1,28 @@
+doctype html  
+html 
+  head 
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css')
+  body
+    .container.mt-3
+      h1.text-center Auto
+      table.table 
+        thead.thead-dark 
+          th Marca 
+          th Modelo 
+          th Precio 
+          th Deuda 
+          th Año 
+          th Color 
+        tbody 
+          each auto in autos
+            tr
+              td= auto.marca 
+              td= auto.modelo 
+              td $ #{auto.precio.toFixed(2)}
+              td $ #{auto.deuda.toFixed(2)}
+              td= auto.año 
+              td= auto.color 
+              
+    
